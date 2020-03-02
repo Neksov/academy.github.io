@@ -1,5 +1,6 @@
 body {
   background: url(../img/fon2.jpg);
+
 }
 
 .bd-placeholder-img {
@@ -39,6 +40,7 @@ body {
   font-size: 25px;
   font-weight: 700;
 }
+
 .img_lessons {
   width: 100%;
   height: 200px;
