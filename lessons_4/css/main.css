@@ -1,0 +1,54 @@
+body {
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 16px;
+  background-color: cornsilk;
+}
+
+#left {
+  margin-left: -30px;
+}
+
+#size {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.left {
+  margin-left: 190px;
+}
+
+.top {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.leftimg {
+  float: left;
+  /* Выравнивание по левому краю */
+  margin: 0px 7px 7px 0;
+  /* Отступы вокруг картинки */
+}
+
+h2 {
+  text-align: center;
+  font-style: italic;
+}
+
+.down {
+  text-align: left;
+}
+
+.line {
+  text-decoration: line-through;
+}
