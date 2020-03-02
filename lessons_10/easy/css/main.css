@@ -1,0 +1,125 @@
+body {
+  color: #32325F;
+}
+
+.navbar {
+  color: #95989a;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.social a {
+  padding-left: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 159px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.discription {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 25px;
+}
+
+.price-tag {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.buttons {
+  margin-top: 49px;
+}
+
+.btn {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #5e72e4;
+}
+
+.btn-success {
+  background-color: #2dce89;
+}
+
+.main-image img {
+  max-width: 100%;
+  margin-top: 191px;
+}
+
+.hero {
+  background-color: #f4f5f7;
+  padding-top: 74px;
+  padding-bottom: 190px;
+}
+
+.section {
+  padding-top: 90px;
+  padding-bottom: 131px;
+}
+
+.block-text {
+  margin-top: 40px;
+  color: #525f7f;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about-block {
+  margin-top: 98px;
+}
+
+.section-subtitle {
+  margin-bottom: 14px;
+}
+
+.footer {
+  padding-top: 78px;
+  padding-bottom: 104px;
+  background-color: #32325f;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer p {
+  line-height: 1.4;
+  color: #ffffff;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+}

@@ -1,0 +1,31 @@
+h1 {
+  color: #333333;
+  font-family: Tahoma;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 82px;
+}
+
+p {
+  color: #333333;
+  font-family: Tahoma;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 20px;
+
+}
+
+.centre {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.centre img {
+  width: 82px;
+  height: 71px;
+  margin-top: 20px;
+}
