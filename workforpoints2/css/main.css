@@ -1,0 +1,50 @@
+body {
+  background-color: #f6f6f6;
+  color: #2f2f2f;
+}
+.plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  border: 1px solid #d7d7d7;
+  background-color: #ffffff;
+  display: flex;
+  width: 1010px;
+  height: 503px;
+}
+.card-beats {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+}
+.card-info {
+  margin-left: 100px;
+}
+.one {
+  margin-top: 94px;
+  font-family: "Arial - Bold MT";
+  font-size: 23px;
+  font-weight: 400;
+}
+.text {
+  margin-top: 30px;
+}
+.price {
+  margin-top: 55px;
+  font-family: "Arial MT";
+  font-size: 15px;
+  font-weight: 400;
+}
+.bill {
+  margin-top: 15px;
+  font-family: "Arial MT";
+  font-size: 30px;
+  font-weight: 400;
+}
+.button {
+  margin-top: 20px;
+}
