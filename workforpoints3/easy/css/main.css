@@ -42,11 +42,8 @@
   margin-bottom: 20px;
 }
 
-
 .main__button {
-
   margin-right: 10px;
-
 }
 
 .button--primary {
@@ -66,6 +63,7 @@
   width: 133px;
   height: 41px;
   border: 2px solid #66cc66;
+  background-color: #ffffff;
   color: #66cc66;
   font-family: "PF Din Text Cond Pro";
   font-size: 14px;
