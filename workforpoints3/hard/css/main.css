@@ -1,0 +1,150 @@
+body {
+  color: #32325f;
+  font-family: "Helvetica Neue";
+}
+
+.navbar {
+  color: #95989a;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.social a {
+  padding-left: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+.discription {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 25px;
+}
+
+.price-tag {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.price {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.buttons {
+  margin-top: 29px;
+}
+
+.btn {
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  padding: 18px 30px;
+}
+
+.btn-primary {
+  background-color: #5e72e4;
+  margin-top: 20px;
+  width: 250px;
+  height: 66px;
+}
+
+.btn-success {
+  background-color: #2dce89;
+  margin-top: 20px;
+  width: 214px;
+  height: 66px;
+}
+
+.main {
+  margin-top: 159px;
+}
+.main-image img {
+  max-width: 100%;
+  padding-top: 70px;
+}
+
+.hero {
+  background-color: #f4f5f7;
+  padding-top: 74px;
+  padding-bottom: 190px;
+}
+
+.section {
+  padding-bottom: 131px;
+}
+
+.block-text {
+  margin-top: 40px;
+  color: #525f7f;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.about-block {
+  margin-top: 98px;
+}
+.section-heading {
+  padding-top: 90px;
+}
+.section-subtitle {
+  margin-bottom: 14px;
+}
+
+.people-section {
+  background-color: #f4f5f7;
+}
+
+.people-block {
+  padding-top: 27px;
+  padding-bottom: 112px;
+}
+
+.people-block img {
+  width: 362px;
+  height: 254px;
+  overflow: hidden;
+  margin-top: 36px;
+  padding-right: 18px;
+}
+
+.footer {
+  padding-top: 58px;
+  padding-bottom: 104px;
+  background-color: #32325f;
+}
+
+.footer-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer p {
+  line-height: 1.4;
+  color: #ffffff;
+  font-size: 16px;
+}
