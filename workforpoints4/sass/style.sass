@@ -1,0 +1,135 @@
+@import "variables"
+
+body, p, h1, h2, h3, h4 
+  margin: 0
+  padding: 0
+  font-family: Arial, Helvetica, sans-serif
+.header 
+  background-color: darken($blue, 50%)
+  padding: 15px 0
+  color: lighten($blue, 100%)
+.header__title 
+  font-size: 18px
+  font-weight: 700
+  line-height: 47px
+.header__callback 
+  text-align: right
+.section 
+  padding: 70px 0
+  text-align: center
+.section__title 
+  font-size: 36px
+  font-weight: 700
+  color: darken($blue, 50%)
+  span 
+    color: adjust-hue($blue, 154deg)
+.section__underline 
+  margin: 10px auto
+  width: 200px
+  height: 2px
+  background-color: $blue
+.coral 
+  color: adjust-hue($blue, 154deg)
+.main 
+  background-color: lighten($blue, 30%) 
+  position: relative
+  h1 
+    margin-bottom: 25px
+    font-size: 60px
+    font-weight: 300
+    text-transform: uppercase
+    color: darken($blue, 50%)
+  .sep 
+    margin: 25px auto
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color: white
+  h3 
+    font-size: 36px
+    font-weight: 300
+    color: darken($blue, 50%)
+  .comment 
+    margin-top: 55px
+    color: desaturate($blue, 100%)
+    font-size: 14px
+    line-height: 18px
+.main__location 
+  margin: 24px auto 21px
+  width: 300px
+  height: 64px
+  font-size: 18px
+  line-height: 64px
+  color: $blue
+  border: 1px solid darken($blue, 50%)
+.problems__list 
+  text-align: left
+  ul 
+    list-style: none
+    li 
+      min-height: 100px
+      font-size: 18px
+      font-weight: 300
+      color: darken($blue, 50%)
+      &::before 
+        position: relative
+        right: 30px
+        top: 25px
+        content: ''
+        display: block
+        width: 20px
+        height: 20px
+        background-color: $blue
+.problems__wrapper 
+  margin: 0 auto
+  padding: 30px
+  max-width: 700px
+  border: 2px solid $blue
+  p 
+    margin-bottom: 10px
+    font-size: 24px
+    color: darken($blue, 50%)
+.prove 
+  background-color: lighten($blue, 30%)
+  img 
+    border-bottom: 1px solid $blue
+.prove__img 
+  margin: 25px auto 10px
+  min-height: 70px
+.footer 
+  padding: 15px 0
+  font-size: 14px
+  font-weight: 300
+  background-color: darken($blue, 50%)
+.footer__left 
+  color: #66a2cc
+  opacity: 0.5
+.footer__right 
+  text-align: right
+  color: $blue
+  a 
+    color: $blue
+    text-decoration: none
+    &:hover 
+      text-decoration: underline
+.button 
+  padding: 10px 30px
+  display: inline-block
+  cursor: pointer
+  font-size: 14px
+  font-weight: 700
+  text-align: center
+  text-transform: uppercase
+  color: white
+  background-color: adjust-hue($blue, 154deg)
+  border: 1px solid adjust-hue($blue, 154deg)
+  border-radius: 25px
+  &:hover 
+    -webkit-box-shadow: 0 0 25px desaturate($blue, 100%)
+    box-shadow: 0 0 25px desaturate($blue, 100%)
+    background-color: $blue
+    border: 1px solid lighten($blue, 30%)
+  &:focus 
+    outline: none
+.button__start 
+  margin-top: 20px
