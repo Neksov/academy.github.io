@@ -64,7 +64,7 @@ body {
   margin-left: 40px;
 }
 
-.item-main__text1 {
+.item-main__text-price {
   color: #1a1820;
   font-family: "Proxima Nova";
   font-size: 19px;
@@ -126,7 +126,7 @@ body {
   background-color: green;
 }
 
-.button--primary1 {
+.button--toorder {
   width: 146px;
   height: 52px;
   box-shadow: 0 8px 13px rgba(0, 0, 0, 0.04);
