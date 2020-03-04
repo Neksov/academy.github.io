@@ -4,8 +4,9 @@ body {
 }
 
 .main__price {
-  background-image: url(/hard/img/back_2.png);
+  max-width: 1920px;
   margin-top: 59px;
+  background-color: green;
 
 }
 
@@ -120,8 +121,9 @@ body {
 }
 
 .main__additional {
-  background-image: url(/hard/img/back_2.png);
+  max-width: 1923px;
   margin-top: 48px;
+  background-color: green;
 }
 
 .button--primary1 {
