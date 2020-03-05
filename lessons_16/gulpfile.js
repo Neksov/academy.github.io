@@ -19,6 +19,7 @@ function bs() {
   });
   watch("./*.html").on("change", browserSync.reload);
   watch("./sass/**/*.sass", serverSass);
+  watch("./scss/**/*.scss", serverSass);
   watch("./js/*.js").on("change", browserSync.reload);
 
 };
@@ -39,7 +40,7 @@ function bs() {
 
 //SASS
 function serverSass() {
-  return src("./sass/*.sass", )
+  return src("./sass/**/*.sass", "./scss/**/*.scss")
     .pipe(sass())
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
