@@ -1,0 +1,23 @@
+*,*:before, *:after
+  box-sizing: border-box //не надо считать высотус учетом внутреннего отсупа
+
+body
+  font-family: 'Futura Book' , sans-serif
+  font-size: 14px
+  
+.section
+  &-title
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Yseva One', cursive
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        width: 32px
+        height: 2px
+        background-color: #E3B873
+        margin: 0 10px
+    
