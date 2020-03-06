@@ -399,6 +399,9 @@ template {
 
 .phone {
   color: #E3B873; }
+  .phone:hover {
+    font-size: 20px;
+    text-decoration: none; }
 
 .contacts__phone {
   margin-right: 45px; }
@@ -485,7 +488,8 @@ template {
       border-radius: 50% 50%;
       border: 2px solid #E3B873;
       padding: 50px 10px;
-      color: #fff; }
+      color: #fff;
+      font-size: 20px; }
 
 .title {
   margin: 0;
