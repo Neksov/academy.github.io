@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+  //do work
+  let modal = document.querySelector(".modal");
+  document.addEventListener("click", e => {
+    if (e.target == modal) {
+      modal.classList.remove("modal--visible");
+    }
+  });
+});
+
 $(document).ready(function() {
   let modal = $(".modal"), //помесщаем модальное окно
     modalBtn = $("[data-toggle = modal]"), //
