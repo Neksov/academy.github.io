@@ -727,6 +727,8 @@ template {
     text-align: left; }
     .projects .swiper-container {
       margin-top: 2.14rem; }
+  .projects .col-50 {
+    width: 100%; }
   .projects .section-title__text--family {
     margin-top: 40px; } }
 
@@ -751,10 +753,8 @@ template {
     margin-bottom: 1.85rem; }
   .hero .hero__scroll-down {
     display: none; }
-  .projects .row {
-    width: 100%; }
   .projects .col-50 {
-    width: 50%; }
+    width: 100%; }
   .projects .section-title__text--family {
     margin-top: 40px; }
   .projects .swiper-container {
@@ -764,7 +764,9 @@ template {
   .hero .hero__scroll-down {
     display: none; }
   .projects .section-title__text--family {
-    margin-top: 40px; } }
+    margin-top: 40px; }
+  .projects .col-50 {
+    width: 100%; } }
 
 .modal {
   opacity: 0;
