@@ -751,6 +751,10 @@ template {
     margin-bottom: 1.85rem; }
   .hero .hero__scroll-down {
     display: none; }
+  .projects .row {
+    width: 100%; }
+  .projects .col-50 {
+    width: 50%; }
   .projects .section-title__text--family {
     margin-top: 40px; }
   .projects .swiper-container {
