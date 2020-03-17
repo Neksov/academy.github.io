@@ -781,6 +781,28 @@ template {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
+  .control {
+    background-color: #131313; }
+    .control__text{
+      color: #fff;
+    }
+    .control__lable{
+      color: #fff;
+    }
+    .control__input{
+      color: #fff;
+    }
+    .control__button{
+      margin-top: 20px;
+      width: 100%;
+      order: 1;
+       
+    }
+    .control__policy{
+      color: #fff;
+      justify-content: left;
+    display: grid;
+}
   .design {
     background-color: #131313; }
     .design__section-title {
