@@ -1,0 +1,58 @@
+*,*:before, *:after
+  box-sizing: border-box //не надо считать высотус учетом внутреннего отсупа
+
+body
+  font-family: 'Futura Book' , sans-serif
+  font-size: 14px
+img
+  max-width: 100%
+.section
+  padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
+    padding-bottom: 23rem
+  &-title
+    text-align: center
+    &--left
+      text-align: left
+    &--light
+      color: $light
+    &__heading
+      text-transform: uppercase
+      font-family: 'Yseva One'
+      margin-top: 0
+      margin-bottom: 5px
+      font-size: 1.94rem
+      line-height: 2.85rem
+      &--primary
+        color: $primary
+    &__word
+      display: flex
+      align-items: center
+      &::after
+        content: ' '
+        width: 112px
+        height: 2px
+        background-color: $primary
+        margin-left: 2.3rem
+    &__text
+      text-align: center
+      &--family
+        max-width: 31.57rem
+        text-align: left
+        font-size: 1.28rem
+        line-height: 2.17rem
+        font-size: 1.3rem
+
+    &__image
+      display: flex
+      justify-content: center
+      align-items: center
+      &::before, &::after
+        content: ''
+        width: 32px
+        height: 2px
+        background-color: #E3B873
+        margin: 0 10px
+    
