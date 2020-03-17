@@ -781,6 +781,8 @@ template {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
+  .control {
+    background-color: #131313; }
   .design {
     background-color: #131313; }
     .design__section-title {
