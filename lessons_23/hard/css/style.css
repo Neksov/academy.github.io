@@ -781,28 +781,35 @@ template {
     margin-bottom: 5rem; }
   .card__text {
     margin-left: 0; }
+  .form {
+    display: block; }
   .control {
     background-color: #131313; }
-    .control__text{
-      color: #fff;
-    }
-    .control__lable{
-      color: #fff;
-    }
-    .control__input{
-      color: #fff;
-    }
-    .control__button{
+    .control__text {
+      color: #fff; }
+    .control__lable {
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 20px; }
+    .control__input {
+      border-bottom: 1px solid #fff; }
+      .control__input::-webkit-input-placeholder {
+        color: #fff; }
+      .control__input::-moz-placeholder {
+        color: #fff; }
+      .control__input:-ms-input-placeholder {
+        color: #fff; }
+      .control__input::-ms-input-placeholder {
+        color: #fff; }
+      .control__input::placeholder {
+        color: #fff; }
+    .control__button {
       margin-top: 20px;
       width: 100%;
-      order: 1;
-       
-    }
-    .control__policy{
+      order: 1; }
+    .control__policy {
       color: #fff;
       justify-content: left;
-    display: grid;
-}
+      display: grid; }
   .design {
     background-color: #131313; }
     .design__section-title {
@@ -905,6 +912,16 @@ template {
     flex-direction: column; }
   .modal__input {
     margin-bottom: 3.428rem; }
+    .modal__input::-webkit-input-placeholder {
+      color: #fff; }
+    .modal__input::-moz-placeholder {
+      color: #fff; }
+    .modal__input:-ms-input-placeholder {
+      color: #fff; }
+    .modal__input::-ms-input-placeholder {
+      color: #fff; }
+    .modal__input::placeholder {
+      color: #fff; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
   .modal__policy {

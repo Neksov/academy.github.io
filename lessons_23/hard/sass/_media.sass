@@ -33,19 +33,24 @@
   .card
     &__text
       margin-left: 0
+  .form
+    display: block
   .control
     background-color: $dark
     &__text
       color: $light
     &__lable
-      color: $light
+      color: rgba(255, 255, 255, 0.5)
+      margin-top: 20px
     &__input
-      color: $light
+      border-bottom: 1px solid $light
+      &::placeholder
+        color: $light
     &__button
       margin-top: 20px
       width: 100%
       order: 1
-    &__policy{
+    &__policy
       color: #fff
       justify-content: left
       display: grid
