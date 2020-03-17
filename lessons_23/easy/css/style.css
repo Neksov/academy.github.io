@@ -334,6 +334,12 @@ template {
 .col-50 {
   width: 50%; }
 
+.col-40 {
+  width: 30%; }
+
+.col-60 {
+  width: 70%; }
+
 .button {
   padding: 11px 21px;
   border: none;
@@ -753,6 +759,16 @@ template {
   color: #fff;
   padding: 1.214rem 2.6rem; }
 
+.step {
+  margin-top: -33.714rem; }
+  .step__row {
+    padding-top: 35.714rem; }
+  .step__swiper {
+    margin-top: 4.5rem; }
+
+.swiper__list ul {
+  display: flex; }
+
 @media screen and (max-width: 1400px) {
   .nav .nav__item {
     margin-right: 1rem; } }
@@ -804,12 +820,12 @@ template {
         color: #fff; }
     .control__button {
       margin-top: 20px;
-      width: 100%;
-      order: 1; }
+      width: 100%; }
     .control__policy {
       color: #fff;
       justify-content: left;
-      display: grid; }
+      display: grid;
+      order: 1; }
   .design {
     background-color: #131313; }
     .design__section-title {
@@ -964,6 +980,31 @@ img {
     padding-bottom: 23rem; }
   .section-title {
     text-align: center; }
+    .section-title__fraction {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 92px; }
+    .section-title__room {
+      font-family: Yeseva One;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 23px;
+      text-transform: uppercase;
+      margin-top: 22px;
+      margin-bottom: 16px; }
+    .section-title__work {
+      position: relative;
+      text-transform: uppercase;
+      font-family: FuturaDemiC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 21px;
+      margin-bottom: 20px; }
     .section-title--left {
       text-align: left; }
     .section-title--light {
@@ -994,6 +1035,12 @@ img {
         font-size: 1.28rem;
         line-height: 2.17rem;
         font-size: 1.3rem; }
+      .section-title__text--apparaiser {
+        max-width: 24.071rem;
+        font-family: 'FuturaBookC';
+        text-align: left;
+        font-size: 1.071rem;
+        line-height: 1.785rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
