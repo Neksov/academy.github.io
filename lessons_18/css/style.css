@@ -45,19 +45,22 @@ body {
     text-decoration: none; }
   .contacts__button {
     display: none; }
-  .hero .title {
-    font-size: 1.64rem; }
-  .hero .hero__content {
-    max-width: 22.86rem; }
-  .hero .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.8rem;
-    margin-bottom: 1.85rem; }
-  .hero .hero__scroll-down {
-    display: none; } }
+  .hero {
+    margin-bottom: 200px; }
+    .hero .title {
+      font-size: 1.64rem; }
+    .hero .hero__content {
+      max-width: 22.86rem;
+      margin-left: 60px; }
+    .hero .hero__text {
+      font-size: 1.29rem;
+      margin-bottom: 2.28rem; }
+    .hero__button {
+      display: block;
+      min-width: 22.8rem;
+      margin-bottom: 1.85rem; }
+    .hero .hero__scroll-down {
+      display: none; } }
 
 @media screen and (max-height: 520px) {
   .hero .hero__scroll-down {

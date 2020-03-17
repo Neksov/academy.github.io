@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   //do work
   let modal = document.querySelector(".modal");
   let modalBtn = document.querySelectorAll("[data-toggle = modal]");
@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
   closeBtn.addEventListener("click", switchModal);
-
+  //по клику
   document.addEventListener("click", e => {
     if (e.target == modal) {
       modal.classList.remove("modal--visible");
     }
-  })
-
-  document.addEventListener('keydown', function (e) {
+  });
+  //по esc
+  document.addEventListener("keydown", function(e) {
     switch (e.keyCode) {
       case 27:
         switchModal();

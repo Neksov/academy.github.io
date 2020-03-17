@@ -24,8 +24,8 @@ function bs() {
 };
 
 //CSSMIN ДОРАБОТАТЬ
-//function cssmin 
-//  src"./css/**/*.css"
+//function cssmin() {
+//  src("./css/**/*.css")
 //   .pipe(cssmin())gulp server
 //   .pipe(
 //     rename({
@@ -41,6 +41,9 @@ function bs() {
 function serverSass() {
   return src("./sass/*.sass")
     .pipe(sass())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
 };

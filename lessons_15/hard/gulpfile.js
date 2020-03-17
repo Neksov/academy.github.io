@@ -41,6 +41,9 @@ function bs() {
 function serverSass() {
   return src("./sass/*.sass")
     .pipe(sass())
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
 };
