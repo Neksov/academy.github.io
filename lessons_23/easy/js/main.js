@@ -45,6 +45,13 @@ $(document).ready(function () {
 
   new WOW().init();
 
+
+  function fraction(event) {
+    var element = event.target; // DOM element, in this example .owl-carousel
+    var items = event.item.count; // Number of items
+    var item = event.page.index + 1; // Position of the current item
+    $('#fraction').html("" + item + " of " + items)
+  }
   //ДЛя анимации
   /*$(window).scroll(function () {
     $('img/video.svg').each(function () {
