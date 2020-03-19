@@ -863,8 +863,10 @@ input.invalid {
   position: absolute;
   margin: -50px; }
 
-.client__row {
-  margin-bottom: 400px; }
+.client {
+  margin-top: -200px; }
+  .client__row {
+    margin-bottom: 400px; }
 
 .card__text--box {
   max-width: 26.857rem;
@@ -953,6 +955,7 @@ input.invalid {
     background-color: #131313;
     padding: 4.285rem 0; }
   .footer__map {
+    display: flex;
     max-width: 66.04rem;
     min-height: 465px;
     margin: auto; }
@@ -979,7 +982,10 @@ input.invalid {
   html {
     font-size: 10px; }
   .nav .nav__item {
-    margin-right: 1rem; } }
+    margin-right: 1rem; }
+  .comand__section-title {
+    margin-top: 10.714rem;
+    margin-left: 20px; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1061,11 +1067,15 @@ input.invalid {
     .comand .card__text {
       margin-left: 20px; }
   .footer {
-    background-color: #131313; }
+    background: none;
+    margin-top: -25px; }
     .footer__menu {
       display: none; }
     .footer__button {
-      width: 100%; } }
+      width: 100%; }
+    .footer__wrap {
+      background-color: #131313;
+      padding: 0; } }
 
 @media screen and (max-width: 570px) {
   .contacts .contacts__phone {
@@ -1198,6 +1208,8 @@ img {
 
 .section {
   padding: 60px 0; }
+  .section.comand {
+    padding-bottom: 200px; }
   .section--dark {
     background-color: #131313;
     color: #fff;
