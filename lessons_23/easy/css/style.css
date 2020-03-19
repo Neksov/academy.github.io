@@ -795,6 +795,83 @@ template {
     font-size: 15px;
     line-height: 18px; }
 
+.comand {
+  margin-top: -550px; }
+  .comand__row {
+    display: flex;
+    justify-content: space-around; }
+  .comand__section-title {
+    color: #fff; }
+  .comand .card__text {
+    max-width: 233px; }
+    .comand .card__text p {
+      font-family: 'FuturaBookC';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 26px;
+      color: #959595;
+      text-align: center; }
+  .comand .card__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center; }
+  .comand .card__pricetag {
+    width: 233px;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase; }
+
+.client__row {
+  margin-bottom: 400px; }
+
+.card__text--box {
+  max-width: 26.857rem;
+  min-height: 30.571rem;
+  font-family: 'FuturaBookC';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 180%;
+  color: #959595; }
+
+.card__title--foto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #131313; }
+  .card__title--foto img {
+    border-radius: 50%; }
+
+.card__pricetag--img {
+  padding-right: 10px;
+  padding-top: 5px; }
+
+.card__pricetag--imgline {
+  height: 55px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.card__pricetag--size {
+  padding: 0.1rem 2.3rem; }
+
+.card__pricetag__size {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   margin-top: 100px;
@@ -917,6 +994,8 @@ template {
   .projects .swiper-container {
     margin-top: 2.14rem; }
   .step {
+    display: none; }
+  .client {
     display: none; } }
 
 @media screen and (max-width: 570px) {
@@ -1106,7 +1185,8 @@ img {
     .section-title__text {
       text-align: center; }
       .section-title__text--client {
-        max-width: 25.714rem; }
+        max-width: 25.714rem;
+        margin-bottom: 200px; }
       .section-title__text--family {
         max-width: 31.57rem;
         text-align: left;
