@@ -410,6 +410,12 @@ template {
   .policy__label--center {
     justify-content: center; }
 
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
+
 .header {
   position: fixed;
   left: 0;
@@ -657,6 +663,9 @@ template {
   flex-direction: column;
   flex-basis: 30%; }
 
+.control__input {
+  color: #131313; }
+
 .control__label {
   margin-bottom: -7px; }
 
@@ -766,7 +775,8 @@ template {
   margin-top: -33.714rem;
   margin-bottom: 200px; }
   .step__row {
-    padding-top: 25.714rem; }
+    padding-top: 25.714rem;
+    padding-bottom: 8.14rem; }
   .step__swiper {
     margin-top: 4.5rem; }
   .step__col-60 {
@@ -796,14 +806,34 @@ template {
     line-height: 18px; }
 
 .comand {
-  margin-top: -550px; }
+  position: absolut;
+  margin-top: -650px; }
+  .comand__text {
+    max-width: 40.785rem;
+    margin: auto;
+    margin-top: 6rem;
+    margin-bottom: 6.285rem;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 2.41rem; }
+    .comand__text::before {
+      display: block;
+      content: '';
+      margin: auto;
+      margin-bottom: 1.5rem;
+      width: 55px;
+      height: 2px;
+      border-radius: 30px;
+      background-color: #E3B873; }
   .comand__row {
     display: flex;
     justify-content: space-around; }
   .comand__section-title {
-    color: #fff; }
+    color: #fff;
+    margin-bottom: 4.28rem; }
   .comand .card__text {
-    max-width: 233px; }
+    max-width: 233px;
+    margin-top: -90px; }
     .comand .card__text p {
       font-family: 'FuturaBookC';
       font-style: normal;
@@ -828,6 +858,10 @@ template {
     line-height: 20px;
     text-align: center;
     text-transform: uppercase; }
+
+.imgComand {
+  position: absolute;
+  margin: -50px; }
 
 .client__row {
   margin-bottom: 400px; }
@@ -996,7 +1030,17 @@ template {
   .step {
     display: none; }
   .client {
-    display: none; } }
+    display: none; }
+  .comand {
+    background-color: #131313; }
+    .comand__section-title {
+      margin-top: 60.714rem; }
+    .comand__row .col-35 {
+      margin-bottom: 12rem; }
+    .comand__text {
+      display: none; }
+    .comand .card__text {
+      margin-left: 20px; } }
 
 @media screen and (max-width: 570px) {
   .contacts .contacts__phone {
@@ -1079,20 +1123,22 @@ template {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.428rem; }
-    .modal__input::-webkit-input-placeholder {
-      color: #fff; }
-    .modal__input::-moz-placeholder {
-      color: #fff; }
-    .modal__input:-ms-input-placeholder {
-      color: #fff; }
-    .modal__input::-ms-input-placeholder {
-      color: #fff; }
-    .modal__input::placeholder {
-      color: #fff; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input::-webkit-input-placeholder {
+    color: #fff; }
+  .modal__input::-moz-placeholder {
+    color: #fff; }
+  .modal__input:-ms-input-placeholder {
+    color: #fff; }
+  .modal__input::-ms-input-placeholder {
+    color: #fff; }
+  .modal__input::placeholder {
+    color: #fff; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {

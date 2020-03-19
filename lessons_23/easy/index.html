@@ -209,21 +209,21 @@
           <div class="control__input-group">
             <label for="user-name" class="label form__label label--dark control__lable">Имя</label>
             <!-- /.label form__label -->
-            <input type="text" class="input form__input control__input control__input--light" id="user-name"
+            <input type="text" name="userName" class="input form__input control__input control__input--light" id="user-name"
               placeholder="Как вас зовут:">
           </div>
 
           <div class="control__input-group">
             <label for="user-phone" class="label form__label label--dark control__lable">Телефон</label>
             <!-- /.label form__label -->
-            <input type="tel" class="input form__input control__input" id="user-phone"
+            <input type="tel" name="userPhone" class="input form__input control__input" id="user-phone"
               placeholder="Ваш номер телефона:">
 
           </div>
           <button class="button button--primary control__button">Отправить</button>
           <!-- /.button button--primary modal__button -->
           <div class="policy control__policy">
-            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+            <input type="checkbox" name="checkBox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
             <label for="policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой
               данных</label>
           </div>
@@ -583,7 +583,7 @@
         </div>
       </div>
     </section>
-    <div class="section comand">
+    <section class="section comand">
       <div class="container">
         <div class="section-title comand__section-title">
           <h2 class="section-title__heading wow tada">Наша команда</h2>
@@ -599,6 +599,7 @@
         <div class="row comand__row">
           <div class="col-35">
             <div class="card comand__card">
+              <img src="/img/img1.png" alt="" class="imgComand">
               <img src="img/alex.png" alt="Алексей Колмаков" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Алексей Колмаков</h3>
@@ -615,7 +616,8 @@
           </div>
           <!-- /.col-30 -->
           <div class="col-35">
-            <div class="card design__card">
+            <div class="card comand__card">
+              <img src="/img/img2.png" alt="" class="imgComand">
               <img src="img/alic.png" alt="Алиса Сухорукова" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Алиса Сухорукова</h3>
@@ -633,7 +635,8 @@
           </div>
           <!-- /.col-30 -->
           <div class="col-35">
-            <div class="card design__card">
+            <div class="card comand__card">
+              <img src="/img/img3.png" alt="" class="imgComand">
               <img src="img/david.png" alt="Давид Волынев" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Давид Волынев</h3>
@@ -652,8 +655,10 @@
           <!-- /.col-30 -->
         </div>
         <!-- /.row -->
+        <p class="comand__text">
+          Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.        </p>
       </div>
-    </div>
+    </section>
     <!-- /.section control -->
     <section class="section client">
       <div class="container">
@@ -765,20 +770,20 @@
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="#" class="form footer__form">
-          <div class="input-group footer__input-group"> <label for="user-name"
-              class="label form__label label--light input--light">Имя</label>
+          <div class="input-group footer__input-group"> 
+            <label for="user-name" class="label form__label label--light input--light">Имя</label>
             <!-- /.label form__label -->
-            <input type="text" class="input form__input footer__input" id="user-name" placeholder="Как вас зовут:">
+            <input type="text" name="userName" class="input form__input footer__input" id="user-name" placeholder="Как вас зовут:">
           </div>
-          <div class="input-group footer__input-group"> <label for="user-phone"
-              class="label form__label label--light input--light">Телефон</label>
+          <div class="input-group footer__input-group"> 
+            <label for="user-phone" class="label form__label label--light input--light">Телефон</label>
             <!-- /.label form__label -->
-            <input type="tel" class="input form__input footer__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input type="tel" name="userPhone" class="input form__input footer__input" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <div class="input-group footer__input-group footer__input-group--full-width"> <label for="user-question"
-              class="label form__label label--light input--light">Вопрос</label>
+          <div class="input-group footer__input-group footer__input-group--full-width"> 
+            <label for="user-question" class="label form__label label--light input--light">Вопрос</label>
             <!-- /.label form__label -->
-            <input type="text" class="input form__input footer__input" id="user-question" placeholder="Я хочу спросить">
+            <input type="text" name="userQuestion" class="input form__input footer__input" id="user-question" placeholder="Я хочу спросить">
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
@@ -822,15 +827,22 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
-        <label for="user-name" class="label form__label label--light input--light">Имя</label>
-        <!-- /.label form__label -->
-        <input type="text" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут:">
-        <label for="user-phone" class="label form__label label--light input--light">Телефон</label>
-        <!-- /.label form__label -->
-        <input type="tel" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
-        <label for="user-email" class="label form__label label--light input--light">Email</label>
-        <!-- /.label form__label -->
-        <input type="email" class="input form__input modal__input" id="user-email" placeholder="Ваш email">
+        <div class="input-group modal__input-group">
+          <label for="user-name" class="label form__label label--light input--light">Имя</label>
+          <!-- /.label form__label -->
+          <input type="text" name="userName" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут:">
+  
+        </div>
+        <div class="input-group modal__input-group">        
+          <label for="user-phone" class="label form__label label--light input--light">Телефон</label>
+          <!-- /.label form__label -->
+          <input type="tel" name="userPhone" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона:">
+  </div>
+        <div class="input-group modal__input-group">        
+          <label for="user-email" class="label form__label label--light input--light">Email</label>
+          <!-- /.label form__label -->
+          <input type="email" name="userEmail" class="input form__input modal__input" id="user-email" placeholder="Ваш email">
+  </div>
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
@@ -848,6 +860,9 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+
   <script src="js/main.js"></script>
   <script src="js/buttonUp.js"></script>
 </body>

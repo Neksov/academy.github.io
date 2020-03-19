@@ -20,9 +20,9 @@ $(document).ready(function () {
     }
   });
   // закрытие по клику
-  modal.click(function () {
+  /*modal.click(function () {
     $(".modal").removeClass("modal--visible");
-  });
+  });*/
 
   //слайдер 
   var mySwiper = new Swiper('.swiper-container', {
@@ -46,22 +46,103 @@ $(document).ready(function () {
   new WOW().init();
 
 
-  function fraction(event) {
-    var element = event.target; // DOM element, in this example .owl-carousel
-    var items = event.item.count; // Number of items
-    var item = event.page.index + 1; // Position of the current item
-    $('#fraction').html("" + item + " of " + items)
-  }
-  //ДЛя анимации
-  /*$(window).scroll(function () {
-    $('img/video.svg').each(function () {
-      var imagePos = $(this).offset().top;
-
-      var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow + $(window).innerHeight()) {
-        $(this).addClass("animated slideInUp")
+  //валидация форм
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // правило- обьект
+      userEmail: {
+        required: true,
+        email: true
       }
-    });
-  });*/
+    },
+    //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязателньо",
+        minlength: "Имя не короче 2 символов",
+        maxlength: "Имя не длиньше 15 символов"
+      },
+
+      userPhone: "Телефон обязателньо",
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      checkBox: {
+        required: true
+      },
+      // правило- обьект
+    },
+    //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязателньо",
+        minlength: "Имя не короче 2 символов",
+        maxlength: "Имя не длиньше 15 символов"
+      },
+      userPhone: "Телефон обязателньо",
+      checkBox: "Подтвердите свое согласие"
+
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: {
+        required: true,
+        minlength: 10,
+        maxlength: 30
+      },
+      // правило- обьект
+    },
+    //сообщения
+    messages: {
+      userName: {
+        required: "Имя обязателньо",
+        minlength: "Имя не короче 2 символов",
+        maxlength: "Имя не длиньше 15 символов"
+      },
+      userPhone: "Телефон обязателньо",
+      userQuestion: {
+        required: "Вопрос обязателньо",
+        minlength: "Вопрос не короче 10 символов",
+        maxlength: "Вопрос не длиньше 30 символов"
+      },
+    }
+  });
+
+  //маска для номера телефона
+  $('[type=tel]').mask('+7(000)000-00-00', {
+    placeholder: "+7(___)___-__-__"
+  });
 
 });
