@@ -1030,9 +1030,15 @@ input.invalid {
         color: #fff; }
       .control__input::placeholder {
         color: #fff; }
+      .control__input-group {
+        flex-basis: 100%; }
+    .control__form {
+      display: flex;
+      flex-wrap: wrap; }
     .control__button {
       margin-top: 20px;
-      width: 100%; }
+      width: 100%;
+      order: 2; }
     .control__policy {
       color: #fff;
       justify-content: left;
@@ -1073,6 +1079,14 @@ input.invalid {
   .footer {
     background: none;
     margin-top: -25px; }
+    .footer__name {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+    .footer__text {
+      order: 1; }
+    .footer__map {
+      order: 0; }
     .footer__menu {
       display: none; }
     .footer__button {

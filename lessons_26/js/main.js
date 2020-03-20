@@ -57,6 +57,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      checkBox: "required",
       // правило- обьект
       userEmail: {
         required: true,
@@ -72,6 +73,8 @@ $(document).ready(function () {
       },
 
       userPhone: "Телефон обязателньо",
+      checkBox: "Подтвердите свое согласие",
+
       userEmail: {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
@@ -117,6 +120,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      checkBox: "required",
       userQuestion: {
         required: true,
         minlength: 10,
@@ -132,6 +136,8 @@ $(document).ready(function () {
         maxlength: "Имя не длиньше 15 символов"
       },
       userPhone: "Телефон обязателньо",
+      checkBox: "Подтвердите свое согласие",
+
       userQuestion: {
         required: "Вопрос обязателньо",
         minlength: "Вопрос не короче 10 символов",

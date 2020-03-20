@@ -51,9 +51,16 @@
       border-bottom: 1px solid $light
       &::placeholder
         color: $light
+      &-group
+        flex-basis: 100%
+    &__form
+      display: flex
+      flex-wrap: wrap
+    
     &__button
       margin-top: 20px
       width: 100%
+      order: 2
     &__policy
       color: #fff
       justify-content: left
@@ -103,6 +110,14 @@
   .footer
     background: none
     margin-top: -25px
+    &__name
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+    &__text
+      order: 1
+    &__map
+      order: 0
     &__menu
       display: none
     &__button
@@ -110,6 +125,7 @@
     &__wrap
       background-color: $dark
       padding: 0
+ 
         
 @media screen and ( max-width: 570px  )
   .contacts
