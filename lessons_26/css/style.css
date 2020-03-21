@@ -562,6 +562,9 @@ input.invalid {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  background: #181818 url("../img/BACKGROUNDLINE_project.png") no-repeat center/cover; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap;
@@ -772,6 +775,7 @@ input.invalid {
   padding: 1.214rem 2.6rem; }
 
 .step {
+  background: #181818 url("../img/BACKGROUNDLINE_6_step.png") no-repeat center/cover;
   margin-top: -33.714rem;
   margin-bottom: 200px; }
   .step__row {
@@ -917,7 +921,7 @@ input.invalid {
   margin-top: 100px;
   padding-top: 3rem; }
   .footer__wrap {
-    background-color: #181818;
+    background: #181818 url("../img/BACKGROUNDLINEfooter.png") no-repeat center/cover;
     max-width: 63.07rem;
     margin: auto;
     padding: 2.5rem;
