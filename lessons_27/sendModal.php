@@ -3,7 +3,6 @@
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
-$userQuestion = $_POST['userQuestion'];
 
 
 
@@ -34,23 +33,9 @@ try {
         $mail->addAddress($_POST['userEmail'] );
         }//для отправки на ящик заполнителя
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}.";
 
-    $mailMessage = '';  //тут мы объявляем пустую строку
-    if (isset($_POST['userName'] )) {   //тут мы проверяем пришло ли к нам значение  userName из формы
-    $mailMessage .= " Имя пользователя: ${userName}" ;  // оператором   .=  мы приклеиваем к существующей строке новую строку
-    }
-    if (isset($_POST['userPhone'] )) {
-    $mailMessage .= " Телефон пользователя: ${userPhone}" ;
-    }
-    if (isset($_POST['userEmail'] )) {
-    $mailMessage .= " Его почта: ${userEmail}" ;
-    }
-    if (isset($_POST['userQuestion'] )) {
-    $mailMessage .= " Его вопрос: ${userQuestion}" ;
-    }
-    $mail->Body    =  $mailMessage;  //в итоге мы получаем строку только с актуальными строками
+
 
 //отправка формы через аякс 
    if ( $mail->send()) {
@@ -58,7 +43,7 @@ try {
    } else {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
    }
-   
+   //$mail->send();
 } 
 catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";

@@ -24,30 +24,30 @@ $(document).ready(function () {
      $(".modal").removeClass("modal--visible");
    });*/
 
-  //слайдер 
-  var mySwiper = new Swiper('.swiper-container', {
+  //слайдер
+  var mySwiper = new Swiper(".swiper-container", {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets', //точки 
+      el: ".swiper-pagination",
+      type: "bullets" //точки
     },
-    navigation: { // движене кнопок
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+    navigation: {
+      // движене кнопок
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+  var next = $(".swiper-button-next");
+  var prev = $(".swiper-button-prev");
+  var bullets = $(".swiper-pagination");
 
-  next.css('left', prev.width() + 10 + bullets.width() + 10)
-  bullets.css('left', prev.width() + 10)
+  next.css("left", prev.width() + 10 + bullets.width() + 10);
+  bullets.css("left", prev.width() + 10);
 
   new WOW().init();
 
-
   //валидация форм
-  $('.modal__form').validate({
+  $(".modal__form").validate({
     errorClass: "invalid",
     rules: {
       // строчное правило
@@ -80,24 +80,22 @@ $(document).ready(function () {
         email: "Введите в формате: name@domain.com"
       }
     },
-    //отправка формы через аякс 
+    //отправка формы через аякс
     submitHandler: function (form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
-        data: $('form').serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
+        url: "sendModal.php",
+        data: $(".modal__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера:" + response);
-          alert('Ajhvf отправлена, мы свяжемся с Вами через 15 минут')
+          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
           $(form)[0].reset(); // чистит поля после отправки формы
           modal.removeClass("modal--visible");
-
         }
       });
     }
   });
 
-  $('.control__form').validate({
+  $(".control__form").validate({
     errorClass: "invalid",
     rules: {
       // строчное правило
@@ -109,7 +107,7 @@ $(document).ready(function () {
       userPhone: "required",
       checkBox: {
         required: true
-      },
+      }
       // правило- обьект
     },
     //сообщения
@@ -121,26 +119,23 @@ $(document).ready(function () {
       },
       userPhone: "Телефон обязателньо",
       checkBox: "Подтвердите свое согласие"
-
     },
-    //отправка формы через аякс 
+    //отправка формы через аякс
     submitHandler: function (form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
-        data: $('form').serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
+        url: "sendControl.php",
+        data: $(".control__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера:" + response);
-          alert('Ajhvf отправлена, мы свяжемся с Вами через 15 минут')
+          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
           $(form)[0].reset(); // чистит поля после отправки формы
-          modal.removeClass("modal--visible");
-
+          control.removeClass("modal--visible");
         }
       });
     }
   });
 
-  $('.footer__form').validate({
+  $(".footer__form").validate({
     errorClass: "invalid",
     rules: {
       // строчное правило
@@ -155,7 +150,7 @@ $(document).ready(function () {
         required: true,
         minlength: 10,
         maxlength: 30
-      },
+      }
       // правило- обьект
     },
     //сообщения
@@ -172,66 +167,60 @@ $(document).ready(function () {
         required: "Вопрос обязателньо",
         minlength: "Вопрос не короче 10 символов",
         maxlength: "Вопрос не длиньше 30 символов"
-      },
+      }
     },
-    //отправка формы через аякс 
+    //отправка формы через аякс
     submitHandler: function (form) {
       $.ajax({
         type: "POST",
-        url: "send.php",
-        data: $('form').serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
+        url: "sendFooter.php",
+        data: $(".footer__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          console.log("Ajax сработал. Ответ сервера:" + response);
-          alert('Ajhvf отправлена, мы свяжемся с Вами через 15 минут')
+          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
           $(form)[0].reset(); // чистит поля после отправки формы
-          modal.removeClass("modal--visible");
-
+          footer.removeClass("modal--visible");
         }
       });
     }
   });
 
   //маска для номера телефона
-  $('[type=tel]').mask('+7(000)000-00-00', {
+  $("[type=tel]").mask("+7(000)000-00-00", {
     placeholder: "+7(___)___-__-__"
   });
 
-
   //Яндекс карта
   ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-        center: [
-
-          7.268056, 80.596667
-
-        ],
-        zoom: 9
-      }, {
-        searchControlProvider: 'yandex#search'
-      }),
-
+    var myMap = new ymaps.Map(
+        "map", {
+          center: [7.268056, 80.596667],
+          zoom: 9
+        }, {
+          searchControlProvider: "yandex#search"
+        }
+      ),
       // Создаём макет содержимого.
       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
       ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Я на Шриланке',
-        balloonContent: 'Это красивое место'
-      }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/me.jpg',
-        // Размеры метки.
-        iconImageSize: [40, 40],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
-      });
-    myMap.behaviors.disable('scrollZoom')
-    myMap.geoObjects
-      .add(myPlacemark);
+      myPlacemark = new ymaps.Placemark(
+        myMap.getCenter(), {
+          hintContent: "Я на Шриланке",
+          balloonContent: "Это красивое место"
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: "default#image",
+          // Своё изображение иконки метки.
+          iconImageHref: "img/me.jpg",
+          // Размеры метки.
+          iconImageSize: [40, 40],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+        }
+      );
+    myMap.behaviors.disable("scrollZoom");
+    myMap.geoObjects.add(myPlacemark);
   });
 });
