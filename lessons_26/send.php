@@ -19,25 +19,46 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+    $mail->Host       = 'smtp.mail.ru';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'n2vvadim@gmail.com';                     // SMTP username
+    $mail->Username   = 'n2v@list.ru';                     // SMTP username
     $mail->Password   = 'VadimNekrasov51046';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port       = 465;                                    // TCP port to connect to
     $mail->CharSet = "UTF-8";
 
     //Recipients
-    $mail->setFrom('n2vvadim@gmail.com');
-    $mail->addAddress('n2v@list.ru');     // Add a recipient
+    $mail->setFrom('n2v@list.ru');
+    $mail->addAddress('n2vvadim@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}. Его вопрос: ${userQuestion}";
+    if (isset($_POST['userEmail'] )) {
+        $mail->addAddress($_POST['userEmail'] );
+        }//для отправки на ящик заполнителя
+
+
+    $mailMessage = '';  //тут мы объявляем пустую строку
+    if (isset($_POST['userName'] )) {   //тут мы проверяем пришло ли к нам значение  userName из формы
+    $mailMessage .= " Имя пользователя: ${userName}" ;  // оператором   .=  мы приклеиваем к существующей строке новую строку
+    }
+    if (isset($_POST['userPhone'] )) {
+    $mailMessage .= " Телефон пользователя: ${userPhone}" ;
+    }
+    if (isset($_POST['userEmail'] )) {
+    $mailMessage .= " Его почта: ${userEmail}" ;
+    }
+    if (isset($_POST['userQuestion'] )) {
+    $mailMessage .= " Его вопрос: ${userQuestion}" ;
+    }
+    $mail->Body    =  $mailMessage;  //в итоге мы получаем строку только с актуальными строками
+
 
     $mail->send();
     header('Location: thanks.html');
-} catch (Exception $e) {
+
+} 
+catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
