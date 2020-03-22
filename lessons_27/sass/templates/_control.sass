@@ -1,0 +1,69 @@
+.control
+  &__section-title
+    margin-bottom: 2.214rem
+    margin-top: -23rem
+  &__video
+    display: flex
+    margin: auto
+    margin-bottom: 4.428rem
+    position: relative
+    max-width: 50.357rem
+    min-height: 27rem
+    background: $dark url(../img/video-mask.jpg) no-repeat center
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba($dark, 0.8)
+  &__text
+    max-width: 40.785rem
+    margin: auto
+    margin-bottom: 4.285rem
+    text-align: center
+    font-size: 1.428rem
+    line-height: 2.41rem
+    &::before
+      display: block
+      content: ''
+      margin: auto
+      margin-bottom: 2.5rem
+      width: 55px
+      height: 2px
+      border-radius: 30px
+      background-color: $primary
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 55rem
+    margin: auto
+  &__policy
+    flex-basis: 100%
+    margin-top: 1rem
+    &-label
+      justify-content: center
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 30% 
+  &__input
+    color: $dark
+  &__label
+    margin-bottom: 7px
+  &__button
+    position: relative
+    padding: 1.285rem 4.785rem
+  #checkBox-error
+    position: absolute
+    margin-left: 310px
+    margin-top: 40px 
+.video
+  &__play //чтоб кнопка вышла впереде 
+    position: relative
+    margin: auto
+  
+
+
+
