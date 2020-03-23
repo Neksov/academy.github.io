@@ -1,50 +1,49 @@
-$(document).ready(function () {
+$(document).ready(function() {
   let modal = $(".modal"), //помесщаем модальное окно
     modalBtn = $("[data-toggle = modal]"), //
     closeBtn = $(".modal__close"); //
 
-  modalBtn.on("click", function () {
+  modalBtn.on("click", function() {
     //присваееваем класс
     modal.toggleClass("modal--visible");
   });
 
-  closeBtn.on("click", function () {
+  closeBtn.on("click", function() {
     //присваееваем класс
     modal.toggleClass("modal--visible");
   });
   //закрытие по esc
-  $(document).keyup("click", function (event) {
+  $(document).keyup("click", function(event) {
     if (event.which == "27") {
       $(".modal").removeClass("modal--visible");
     }
   });
   // закрытие по клику вне окна
-  $(document).click(function (e) {
-    if ($(e.target).is('.modal')) {
-      modal.toggleClass('modal--visible');
+  $(document).click(function(e) {
+    if ($(e.target).is(".modal")) {
+      modal.toggleClass("modal--visible");
     }
   });
 
   //открытие модального окна ПОДПИСКИ
-  $('.modalSend-btn').on('click', function (event) {
+  $(".modalSend-btn").on("click", function(event) {
     event.preventDefault();
-    $('.modalSend').fadeIn();
+    $(".modalSend").fadeIn();
   });
   //открытие модального окна подписки по крестику
-  $('.modalSend-close').on('click', function (event) {
+  $(".modalSend-close").on("click", function(event) {
     event.preventDefault();
-    $('.modalSend').fadeOut();
+    $(".modalSend").fadeOut();
   });
   //закрытие по esc
-  $(document).keyup("click", function (event) {
+  $(document).keyup("click", function(event) {
     if (event.which == "27") {
       $(".modalSend").fadeOut();
     }
   });
   // закрытие по клику вне окна
-  $(document).on("click", function (e) {
+  $(document).on("click", function(e) {
     $(".modalSend").fadeOut();
-
   });
 
   //слайдер
@@ -104,16 +103,16 @@ $(document).ready(function () {
       }
     },
     //отправка формы через аякс
-    submitHandler: function (form) {
+    submitHandler: function(form) {
       $.ajax({
         type: "POST",
         url: "sendModal.php",
         data: $(".modal__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function (response) {
+        success: function(response) {
           //modal.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           modal.removeClass("modal--visible");
-          $('.modalSend').fadeIn();
+          $(".modalSend").fadeIn();
         }
       });
     }
@@ -145,15 +144,15 @@ $(document).ready(function () {
       checkBoxControl: "Подтвердите свое согласие"
     },
     //отправка формы через аякс
-    submitHandler: function (form) {
+    submitHandler: function(form) {
       $.ajax({
         type: "POST",
         url: "sendControl.php",
         data: $(".control__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function (response) {
+        success: function(response) {
           //control.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
-          $('.modalSend').fadeIn();
+          $(".modalSend").fadeIn();
         }
       });
     }
@@ -194,15 +193,15 @@ $(document).ready(function () {
       }
     },
     //отправка формы через аякс
-    submitHandler: function (form) {
+    submitHandler: function(form) {
       $.ajax({
         type: "POST",
         url: "sendFooter.php",
         data: $(".footer__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function (response) {
+        success: function(response) {
           //footer.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
-          $('.modalSend').fadeIn();
+          $(".modalSend").fadeIn();
         }
       });
     }
@@ -214,37 +213,43 @@ $(document).ready(function () {
   });
 
   //Яндекс карта
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map(
-        "map", {
-          center: [7.268056, 80.596667],
-          zoom: 9
-        }, {
-          searchControlProvider: "yandex#search"
-        }
-      ),
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-      myPlacemark = new ymaps.Placemark(
-        myMap.getCenter(), {
-          hintContent: "Я на Шриланке",
-          balloonContent: "Это красивое место"
-        }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: "default#image",
-          // Своё изображение иконки метки.
-          iconImageHref: "img/me.jpg",
-          // Размеры метки.
-          iconImageSize: [40, 40],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-        }
-      );
-    myMap.behaviors.disable("scrollZoom");
-    myMap.geoObjects.add(myPlacemark);
-  });
+  setTimeout(() => {
+    ymaps.load(["package.traffic", "package.search"], () => {
+      var myMap = new ymaps.Map(
+          "map",
+          {
+            center: [7.268056, 80.596667],
+            zoom: 9
+          },
+          {
+            searchControlProvider: "yandex#search"
+          }
+        ),
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+        myPlacemark = new ymaps.Placemark(
+          myMap.getCenter(),
+          {
+            hintContent: "Я на Шриланке",
+            balloonContent: "Это красивое место"
+          },
+          {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: "default#image",
+            // Своё изображение иконки метки.
+            iconImageHref: "img/me.jpg",
+            // Размеры метки.
+            iconImageSize: [40, 40],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+          }
+        );
+      myMap.behaviors.disable("scrollZoom");
+      myMap.geoObjects.add(myPlacemark);
+    });
+  }, 3000);
 });
