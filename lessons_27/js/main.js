@@ -1,8 +1,7 @@
 $(document).ready(function () {
   let modal = $(".modal"), //помесщаем модальное окно
     modalBtn = $("[data-toggle = modal]"), //
-    closeBtn = $(".modal__close"), //
-    modalD = $(".modal__dialog");
+    closeBtn = $(".modal__close"); //
 
   modalBtn.on("click", function () {
     //присваееваем класс
@@ -19,6 +18,23 @@ $(document).ready(function () {
       $(".modal").removeClass("modal--visible");
     }
   });
+  //открытие модального окна подписки
+  $('.modalSend-btn').on('click', function (event) {
+    event.preventDefault();
+    $('.modalSend').fadeIn();
+  });
+  //открытие модального окна подписки по крестику
+  $('.modalSend-close').on('click', function (event) {
+    event.preventDefault();
+    $('.modalSend').fadeOut();
+  });
+  //закрытие по esc
+  $(document).keyup("click", function (event) {
+    if (event.which == "27") {
+      $(".modalSend").fadeOut();
+    }
+  });
+
   /* // закрытие по клику
    modal.click(function () {
      $(".modal").removeClass("modal--visible");
