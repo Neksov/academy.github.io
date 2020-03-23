@@ -1,9 +1,13 @@
-const { src, dest, watch } = require("gulp");
+const {
+  src,
+  dest,
+  watch
+} = require("gulp");
 const browserSync = require("browser-sync").create();
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
+const autoprefixer = require('gulp-autoprefixer');
 
 // Static server, обновление старницы автоматом
 function bs() {
@@ -33,7 +37,7 @@ function bs() {
 
 //SASS
 function serverSass() {
-  return src("./sass/*.sass")
+  return src("./sass/**/*.sass")
     .pipe(sass())
     .pipe(
       autoprefixer({

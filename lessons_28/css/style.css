@@ -398,7 +398,8 @@ template {
 .policy__label {
   display: flex;
   align-items: center;
-  font-size: 1.142rem; }
+  font-size: 1.142rem;
+  justify-content: center; }
   .policy__label::before {
     content: ' ';
     width: 18px;
@@ -676,7 +677,7 @@ input.invalid {
   position: relative;
   padding: 1.285rem 4.785rem; }
 
-.control #checkBox-error {
+.control #checkBoxControl-error {
   position: absolute;
   margin-left: 310px;
   margin-top: 40px; }
@@ -878,6 +879,7 @@ input.invalid {
   margin: -50px; }
 
 .client {
+  background: url("../img/BACKGROUNDLINE_Client.png") no-repeat center/cover;
   margin-top: -200px; }
   .client .row {
     margin-bottom: 400px;
@@ -923,7 +925,7 @@ input.invalid {
     margin-right: 10px; }
   .card__pricetag--size {
     padding: 0.1rem 2.3rem; }
-  .card__pricetag__size {
+  .card__pricetag-review {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -999,7 +1001,7 @@ input.invalid {
     margin-bottom: 30px; }
     .footer__img img {
       padding-left: 10px; }
-  .footer #checkBox-error {
+  .footer #checkBoxFooter-error {
     position: absolute;
     margin-left: 15px;
     margin-top: 45px; }
@@ -1225,15 +1227,16 @@ input.invalid {
   .modal__input:last-of-type {
     margin-bottom: 1rem; }
   .modal__policy-label {
-    margin-top: -3.7rem; }
+    margin-top: -3.7rem;
+    justify-content: left; }
   .modal__button {
     align-self: flex-end;
     margin-top: -50px;
     padding: 15px 40px; }
-  .modal #checkBox-error {
+  .modal #checkBoxModal-error {
     position: absolute;
     margin-left: 15px;
-    margin-top: 45px; }
+    margin-top: -10px; }
 
 .modalSend {
   display: none;
@@ -1245,13 +1248,15 @@ input.invalid {
   transform: translateX(-50%);
   padding: 4rem 6rem;
   background: #131313 url(../img/bg-lines.svg) no-repeat center/140%;
-  color: #fff; }
+  color: #fff;
+  max-width: 36rem;
+  max-height: 36rem; }
   .modalSend-close {
     position: absolute;
     right: 0;
     top: 0;
-    width: 8px;
-    height: 8px;
+    width: 30px;
+    height: 30px;
     background: transparent url(../img/close.svg) no-repeat center;
     border: none;
     margin: 12px;

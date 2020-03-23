@@ -42,10 +42,9 @@ $(document).ready(function () {
     }
   });
   // закрытие по клику вне окна
-  $(document).click(function (e) {
-    if ($(e.target).is('.modalSend')) {
-      $(".modalSend").fadeOut();
-    }
+  $(document).on("click", function (e) {
+    $(".modalSend").fadeOut();
+
   });
 
   //слайдер
@@ -81,7 +80,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      checkBox: "required",
+      checkBoxModal: "required",
       // правило- обьект
       userEmail: {
         required: true,
@@ -97,7 +96,7 @@ $(document).ready(function () {
       },
 
       userPhone: "Телефон обязателньо",
-      checkBox: "Подтвердите свое согласие",
+      checkBoxModal: "Подтвердите свое согласие",
 
       userEmail: {
         required: "Обязательно укажите email",
@@ -130,7 +129,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      checkBox: {
+      checkBoxControl: {
         required: true
       }
       // правило- обьект
@@ -143,7 +142,7 @@ $(document).ready(function () {
         maxlength: "Имя не длиньше 15 символов"
       },
       userPhone: "Телефон обязателньо",
-      checkBox: "Подтвердите свое согласие"
+      checkBoxControl: "Подтвердите свое согласие"
     },
     //отправка формы через аякс
     submitHandler: function (form) {
@@ -170,7 +169,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      checkBox: "required",
+      checkBoxFooter: "required",
       userQuestion: {
         required: true,
         minlength: 10,
@@ -186,7 +185,7 @@ $(document).ready(function () {
         maxlength: "Имя не длиньше 15 символов"
       },
       userPhone: "Телефон обязателньо",
-      checkBox: "Подтвердите свое согласие",
+      checkBoxFooter: "Подтвердите свое согласие",
 
       userQuestion: {
         required: "Вопрос обязателньо",
