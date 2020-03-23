@@ -103,9 +103,10 @@ $(document).ready(function () {
         url: "sendModal.php",
         data: $(".modal__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
+          //modal.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           modal.removeClass("modal--visible");
+          $('.modalSend').fadeIn();
         }
       });
     }
@@ -143,9 +144,9 @@ $(document).ready(function () {
         url: "sendControl.php",
         data: $(".control__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
+          //control.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
-          control.removeClass("modal--visible");
+          $('.modalSend').fadeIn();
         }
       });
     }
@@ -192,9 +193,9 @@ $(document).ready(function () {
         url: "sendFooter.php",
         data: $(".footer__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
         success: function (response) {
-          alert("Письмо отправлено, мы свяжемся с Вами через 15 минут");
+          //footer.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
-          footer.removeClass("modal--visible");
+          $('.modalSend').fadeIn();
         }
       });
     }

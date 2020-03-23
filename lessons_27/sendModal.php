@@ -33,6 +33,8 @@ try {
         $mail->addAddress($_POST['userEmail'] );
         }//для отправки на ящик заполнителя
     // Content
+    $mail->Subject = 'Новая заявка с сайта';
+
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}.";
 
 
