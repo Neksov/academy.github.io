@@ -89,12 +89,12 @@ $(document).ready(function () {
     //сообщения
     messages: {
       userName: {
-        required: "Имя обязателньо",
+        required: "Имя обязательно",
         minlength: "Имя не короче 2 символов",
         maxlength: "Имя не длиньше 15 символов"
       },
 
-      userPhone: "Телефон обязателньо",
+      userPhone: "Телефон обязателен",
       checkBoxModal: "Подтвердите свое согласие",
 
       userEmail: {
@@ -136,11 +136,11 @@ $(document).ready(function () {
     //сообщения
     messages: {
       userName: {
-        required: "Имя обязателньо",
+        required: "Имя обязательно",
         minlength: "Имя не короче 2 символов",
         maxlength: "Имя не длиньше 15 символов"
       },
-      userPhone: "Телефон обязателньо",
+      userPhone: "Телефон обязателен",
       checkBoxControl: "Подтвердите свое согласие"
     },
     //отправка формы через аякс
@@ -179,15 +179,15 @@ $(document).ready(function () {
     //сообщения
     messages: {
       userName: {
-        required: "Имя обязателньо",
+        required: "Имя обязательно",
         minlength: "Имя не короче 2 символов",
         maxlength: "Имя не длиньше 15 символов"
       },
-      userPhone: "Телефон обязателньо",
+      userPhone: "Телефон обязателен",
       checkBoxFooter: "Подтвердите свое согласие",
 
       userQuestion: {
-        required: "Вопрос обязателньо",
+        required: "Вопрос обязателен",
         minlength: "Вопрос не короче 10 символов",
         maxlength: "Вопрос не длиньше 30 символов"
       }
@@ -209,7 +209,7 @@ $(document).ready(function () {
 
   //маска для номера телефона
   $("[type=tel]").mask("+7(000)000-00-00", {
-    placeholder: "+7(___)___-__-__"
+    placeholder: "Ваш номер телефона:"
   });
 
   //Яндекс карта
