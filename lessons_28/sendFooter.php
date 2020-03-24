@@ -53,7 +53,6 @@ try {
         }
     $mail->Body    =  $mailMessage;  //в итоге мы получаем строку только с актуальными строками*/
     $mail->Subject = 'Новая заявка с сайта';
-
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его вопрос: ${userQuestion}";
 
 
