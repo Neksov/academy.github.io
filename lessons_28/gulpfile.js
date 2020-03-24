@@ -50,7 +50,7 @@ exports.server = bs;
 
 gulp.task("compress", function () {
   gulp
-    .src("img/*") //папка из которой берем
+    .src("img/types/*") //папка из которой берем
     .pipe(imagemin())
     .pipe(gulp.dest("img/images/")); // папка в которую кладем
 });
