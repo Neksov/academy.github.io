@@ -30,28 +30,6 @@ try {
     $mail->setFrom('n2v@list.ru');
     $mail->addAddress('n2vvadim@gmail.com');     // Add a recipient
 
-    /*if (isset($_POST['userEmail'] )) {
-        $mail->addAddress($_POST['userEmail'] );
-        }//для отправки на ящик заполнителя
-    // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
-
-    $mailMessage = '';  //тут мы объявляем пустую строку
-    if (isset($_POST['userName'] )) {   //тут мы проверяем пришло ли к нам значение  userName из формы
-    $mailMessage .= " Имя пользователя: ${userName}" ;  // оператором   .=  мы приклеиваем к существующей строке новую строку
-    }
-    if (isset($_POST['userPhone'] )) {
-    $mailMessage .= " Телефон пользователя: ${userPhone}" ;
-    }
-
-    if (isset($_POST['userQuestion'] )) {
-    $mailMessage .= " Его вопрос: ${userQuestion}" ;
-    }
-    if (isset($_POST['userEmail'] )) {
-        $mailMessage .= " Его почта: ${userEmail}" ;
-        }
-    $mail->Body    =  $mailMessage;  //в итоге мы получаем строку только с актуальными строками*/
     $mail->Subject = 'Новая заявка с сайта';
     $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его вопрос: ${userQuestion}";
 

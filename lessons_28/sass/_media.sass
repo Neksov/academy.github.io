@@ -16,8 +16,13 @@
   .modal
     &__btn
       margin-top: -30px
-
-
+  .control
+    #checkBoxControl-error
+      margin-left: 205px
+      margin-top: 20px
+  .footer
+    #checkBoxFooter-error
+      margin-left: 105px
 @media screen and ( max-width: 992px )
   *:hover 
     #button-up 
@@ -40,6 +45,10 @@
       &__text
         &--family
           margin-top: 40px
+    .swiper
+      &-container
+        width: 100%
+        height: 100%
 
 @media screen and ( max-width: 760px  )
   .hero
@@ -75,9 +84,8 @@
     &__form
       display: flex
       flex-wrap: wrap
-    
     &__btn
-      margin-top: 20px
+      margin-top: 40px
       width: 100%
       order: 2
     &__policy
@@ -85,6 +93,9 @@
       justify-content: left
       display: grid
       order: 1
+    #checkBoxControl-error
+      margin-left: 25px 
+      margin-top: 30px 
   .design
     background-color: $dark
     &__section-title
@@ -142,7 +153,7 @@
     &__wrap
       background: $dark
       padding: 0
-         
+        
 @media screen and ( max-width: 570px  )
   .contacts
     .contacts__phone
@@ -153,17 +164,16 @@
       display: none
   .hero  
     .title
-      font-size: 1.64rem
+      font-size: 2.64rem
     .hero__content
-      max-width: 22.86rem
-      margin-left: 25px
+      margin-bottom: 50px
     .hero__text
-      font-size: 1.39rem
-      margin-bottom: 2.28rem
-    &__button
+      font-size: 1.98rem
+      margin-bottom: 3.28rem
+    &__btn
       display: block
-      min-width: 22.8rem
       margin-bottom: 1.85rem
+      font-size: 13px
     .hero__scroll-down
       display: none
   .projects
@@ -180,6 +190,11 @@
   .modalSend
     &-content
       max-width: 100%
+  .modal
+    &__btn
+      bottom: 0
+      right: 0
+      margin: 0
 @media screen and ( max-height: 520px  )
   .hero
     .hero__scroll-down
