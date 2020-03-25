@@ -1,5 +1,5 @@
 .modalSend
- // display: none
+  display: none
   position: fixed
   z-index: 199
   left: 50%
@@ -11,7 +11,7 @@
   color: $light
   max-width: 36rem
   max-height: 36rem
-  &-close
+  &__close
     position: absolute
     right: 0
     top: 0
@@ -21,18 +21,17 @@
     border: none
     margin: 12px
     cursor: pointer
-  &-content
+  &__dialog
     text-align: center
     font-family: 'Yeseva One', cursive
-    line-height: 30px
-  &-header
-    font-size: 18px
-    margin: 0
-    padding: 0
+    line-height: 2rem
+
+  &__header
+    font-size: 15px
   a
     text-decoration: none
     color: $light
-    font-size: 28px
+    font-size: 25px
 
 
 

@@ -15,6 +15,12 @@
   "bugs": {
     "url": "https://github.com/Neksov/academy.github.io/issues"
   },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
   "homepage": "https://github.com/Neksov/academy.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2",

@@ -43,16 +43,16 @@
   &__btn
     margin: auto
     padding: 1.285rem 4.785rem
+ 
   &__menu
     margin-top: 4rem
     background-color: $dark
     padding: 4.285rem 0
-  &__map
     display: flex
-    max-width: 66.04rem
-    min-height: 465px
-    margin: auto
-    filter: grayscale(1)
+  &__name
+    display: block
+    justify-content: center
+    flex-wrap: wrap
   &__text
     font-family: 'Yeseva One', cursive
     font-size: 13px
@@ -62,11 +62,15 @@
     color: $primary
     margin-top: 52px
   &__img
-    display: flex
-    justify-content: center
     margin-bottom: 30px
     img
       padding-left: 10px
+  &__map
+    max-width: 66.04rem
+    min-height: 465px
+    margin: auto
+    filter: grayscale(1)
+    padding-bottom: 30px
   #checkBoxFooter-error
     position: absolute
     margin-left: 165px

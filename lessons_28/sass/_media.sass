@@ -16,7 +16,18 @@
   .modal
     &__btn
       margin-top: -30px
+
+
 @media screen and ( max-width: 992px )
+  *:hover 
+    #button-up 
+      cursor: none
+    .phone
+      font-size: none
+    .hero
+      &__scroll-down
+        box-shadow: none
+        color: none
   .nav
     display: none
   .hero
@@ -119,15 +130,11 @@
   .footer
     background: none
     margin-top: -25px
-    &__name
-      display: flex
-      justify-content: center
-      flex-wrap: wrap
     &__text
       order: 1
     &__map
       order: 0
-
+      width: 100%
     &__menu
       display: none
     &__btn
@@ -170,7 +177,9 @@
     .swiper
       &-container
         margin-top: 2.14rem
-
+  .modalSend
+    &-content
+      max-width: 100%
 @media screen and ( max-height: 520px  )
   .hero
     .hero__scroll-down
