@@ -1,8 +1,4 @@
-const {
-  src,
-  dest,
-  watch
-} = require("gulp");
+const { src, dest, watch } = require("gulp");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
@@ -12,6 +8,7 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const uglify = require("gulp-uglify");
 const minify = require("gulp-minify");
+const htmlmin = require("gulp-htmlmin");
 
 // Static server, обновление старницы автоматом
 function bs() {
@@ -32,16 +29,16 @@ function bs() {
 function serverSass() {
   return (
     src("./sass/*.sass")
-    .pipe(sass())
-    //для префиксов
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 2 versions"],
-        cascade: false
-      })
-    )
-    .pipe(dest("./css"))
-    .pipe(browserSync.stream())
+      .pipe(sass())
+      //для префиксов
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 2 versions"],
+          cascade: false
+        })
+      )
+      .pipe(dest("./css"))
+      .pipe(browserSync.stream())
   );
 }
 
@@ -49,7 +46,7 @@ exports.server = bs;
 
 // Compress Task
 
-gulp.task("compress", function () {
+gulp.task("compress", function() {
   gulp
     .src("img/*") //папка из которой берем
     .pipe(imagemin())
@@ -57,7 +54,7 @@ gulp.task("compress", function () {
 });
 
 //minCSS-gulp mincss
-gulp.task("mincss", function () {
+gulp.task("mincss", function() {
   return gulp
     .src("css/*.css")
 
@@ -73,7 +70,7 @@ gulp.task("mincss", function () {
 });
 
 //minJS-gulp minjs
-gulp.task("min-js", function () {
+gulp.task("min-js", function() {
   return gulp
     .src("js/*.js")
     .pipe(
@@ -86,18 +83,3 @@ gulp.task("min-js", function () {
     )
     .pipe(gulp.dest("app/js"));
 });
-
-/*function buildJS(done) {
-  src(["js/**.js", "!js/**.min.js"])
-    .pipe(minify({
-      ext: {
-        min: '.js'
-      },
-      noSource: true
-    }))
-    .pipe(dest("./dist/js/"));
-  src("js/**.min.js")
-    .pipe(dest("./dist/js/"));
-  done();
-};
-exports.server = buildJS;*/
