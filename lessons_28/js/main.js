@@ -249,27 +249,45 @@ $(document).ready(function () {
       myMap.geoObjects.add(myPlacemark);
     });
   }, 3000);
-});
 
-//плавный якорь
-$(function () {
-  $('a[href^="#"]').on('click', function (event) {
-    // отменяем стандартное действие
-    event.preventDefault();
 
-    var sc = $(this).attr("href"),
-      dn = $(sc).offset().top;
-    /*
-     * sc - в переменную заносим информацию о том, к какому блоку надо перейти
-     * dn - определяем положение блока на странице
-     */
+  //плавный якорь
+  $(function () {
+    $('a[href^="#"]').on('click', function (event) {
+      // отменяем стандартное действие
+      event.preventDefault();
 
-    $('html, body').animate({
-      scrollTop: dn
-    }, 1000);
+      var sc = $(this).attr("href"),
+        dn = $(sc).offset().top;
+      /*
+       * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+       * dn - определяем положение блока на странице
+       */
 
-    /*
-     * 1000 скорость перехода в миллисекундах
-     */
+      $('html, body').animate({
+        scrollTop: dn
+      }, 1000);
+
+      /*
+       * 1000 скорость перехода в миллисекундах
+       */
+    });
+
   });
 });
+//видио на сайте
+var player;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '465',
+    width: '100%',
+    videoId: '8awdQRP816c',
+    events: {
+      'onReady': videoPlay,
+    }
+  });
+});
+
+function videoPlay(event) {
+  event.target.videoPlay();
+}

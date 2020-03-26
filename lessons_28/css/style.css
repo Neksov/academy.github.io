@@ -773,7 +773,8 @@ input.invalid {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types__section-title {
   margin-bottom: 2rem; }

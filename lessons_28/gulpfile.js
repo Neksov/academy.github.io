@@ -16,6 +16,7 @@ const minify = require("gulp-minify");
 // Static server, обновление старницы автоматом
 function bs() {
   serverSass();
+  // buildJS();
 
   browserSync.init({
     server: {
@@ -85,3 +86,18 @@ gulp.task("min-js", function () {
     )
     .pipe(gulp.dest("app/js"));
 });
+
+/*function buildJS(done) {
+  src(["js/**.js", "!js/**.min.js"])
+    .pipe(minify({
+      ext: {
+        min: '.js'
+      },
+      noSource: true
+    }))
+    .pipe(dest("./dist/js/"));
+  src("js/**.min.js")
+    .pipe(dest("./dist/js/"));
+  done();
+};
+exports.server = buildJS;*/
