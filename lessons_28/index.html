@@ -54,10 +54,10 @@
         <div class="logo menu_logo wow fadeInLeft">Repair Design Project</div>
         <nav class="nav menu_nav" id="menu">
           <!--элемент блока menu.Элемент близлежащего родительского блока -->
-          <a href="#" class="nav__item" style="color:#E3B873;">Главная</a>
+          <a href="#hero" class="nav__item" style="color:#E3B873;">Главная</a>
           <!--nav__item Элемент блока nav-->
           <a href="#projects" class="nav__item">Проекты</a>
-          <a href="#" class="nav__item">Замер</a>
+          <a href="#hero" class="nav__item">Замер</a>
           <a href="#comand" class="nav__item">Команда</a>
           <a href="#client" class="nav__item">Отзывы</a>
           <a href="#footer" class="nav__item">Контакты</a>
@@ -74,7 +74,7 @@
     <!-- /.container -->
   </header>
   <main>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="instagram hero__instagram wow flipInX">
         <a href="https://vk.com/glo_academy" class="instagram__link" data-wow-delay="4s" data-wow-iteration="4"
           target="_blank">Instagram</a>
@@ -100,12 +100,12 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href=" #" class="hero__scroll-down wow pulse infinite" data-wow-delay="4s" data-wow-iteration="4">
+      <a href=" #" class="hero__scroll-down wow pulse infinite" data-wow-delay="4s" data-wow-iteration="4"
+        id="projects">
         листайте вниз
       </a>
     </section>
     <!--Секция проект-->
-    <div id="projects"></div>
     <section class="section section--dark projects ">
       <div class="container">
         <div class="row row__projects">
@@ -867,7 +867,7 @@
       <!-- /.container -->
     </section>
   </main>
-  <footer class="footer section--dark section--dark__foot" id="footer">
+  <footer class="footer section--dark section--dark__foot">
     <div class="container">
       <div class="footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
@@ -895,7 +895,7 @@
             <label for="footer-policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
-          <button class="btn btn--primary footer__btn">
+          <button class="btn btn--primary footer__btn" id="footer">
             Отправить
           </button>
           <!-- /.button button-rimary footer__button -->
