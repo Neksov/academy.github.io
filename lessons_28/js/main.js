@@ -238,22 +238,7 @@ $(document).ready(function() {
     });
   });
 });
-//видио на сайте
-var player;
-$(".video__play").on("click", function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "465",
-    width: "100%",
-    videoId: "8awdQRP816c",
-    events: {
-      onReady: videoPlay
-    }
-  });
-});
 
-function videoPlay(event) {
-  event.target.videoPlay();
-}
 
 [].forEach.call(document.querySelectorAll("img[data-src]"), function(img) {
   img.setAttribute("src", img.getAttribute("data-src"));

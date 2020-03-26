@@ -472,7 +472,9 @@ input.invalid {
   color: #E3B873;
   text-transform: uppercase;
   font-size: 0.94rem;
-  margin-left: -22px; }
+  margin-left: -22px;
+  cursor: pointer;
+  text-decoration: none; }
 
 .nav__item {
   color: #fff;
@@ -488,7 +490,6 @@ input.invalid {
   color: #E3B873;
   font-size: 15px; }
   .phone:hover {
-    font-size: 20px;
     text-decoration: none; }
 
 .contacts__phone {
