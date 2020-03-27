@@ -1,52 +1,52 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let modal = $(".modal"); //помесщаем модальное окно
   modalBtn = $("[data-toggle = modal]"); //
   closeBtn = $(".modal__close"); //
 
-  modalBtn.on("click", function() {
+  modalBtn.on("click", function () {
     //присваееваем класс
     modal.toggleClass("modal--visible");
   });
 
-  closeBtn.on("click", function() {
+  closeBtn.on("click", function () {
     //присваееваем класс
     modal.toggleClass("modal--visible");
   });
   //закрытие по esc
-  $(document).keyup("click", function(event) {
+  $(document).keyup("click", function (event) {
     if (event.which == "27") {
       $(".modal").removeClass("modal--visible");
     }
   });
   // закрытие по клику вне окна
-  $(document).click(function(e) {
+  $(document).click(function (e) {
     if ($(e.target).is(".modal")) {
       modal.toggleClass("modal--visible");
     }
   });
 
   //открытие модального окна ПОДПИСКИ
-  $(".modalSend-btn").on("click", function(event) {
+  $(".modalSend-btn").on("click", function (event) {
     event.preventDefault();
     $(".modalSend").fadeIn();
   });
   //открытие модального окна подписки по крестику
-  $(".modalSend-close").on("click", function(event) {
+  $(".modalSend-close").on("click", function (event) {
     event.preventDefault();
     $(".modalSend").fadeOut();
   });
   //закрытие по esc
-  $(document).keyup("click", function(event) {
+  $(document).keyup("click", function (event) {
     if (event.which == "27") {
       $(".modalSend").fadeOut();
     }
   });
   // закрытие по клику вне окна
-  $(document).on("click", function(e) {
+  $(document).on("click", function (e) {
     $(".modalSend").fadeOut();
   });
 
-  //слайдер
+  //слайдер Project
   var mySwiper = new Swiper(".swiper-container", {
     loop: true,
     pagination: {
@@ -67,6 +67,33 @@ $(document).ready(function() {
   bullets.css("left", prev.width() + 10);
 
   new WOW().init();
+
+  //Слайдер секции 6 шагов
+
+
+  var mySwiper2 = new Swiper('.slider-six-steps', {
+    loop: !0,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-six-steps-next',
+      prevEl: '.swiper-six-steps-prev',
+    },
+  });
+
+  var nextStepsBtn = $('.swiper-six-steps-next');
+  var prevStepsBtn = $('.swiper-six-steps-prev');
+  var bullets = $('.swiper-pagination');
+
+  nextStepsBtn.css('left', prevStepsBtn.width() + 20 + bullets.width() + 65)
+  bullets.css('left', prevStepsBtn.width() + 20)
+
+
+  new WOW({
+    mobile: false
+  }).init();
 
   //валидация форм
   $(".modal__form").validate({
@@ -103,12 +130,12 @@ $(document).ready(function() {
       }
     },
     //отправка формы через аякс
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       $.ajax({
         type: "POST",
         url: "sendModal.php",
         data: $(".modal__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function(response) {
+        success: function (response) {
           //modal.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           modal.removeClass("modal--visible");
@@ -144,12 +171,12 @@ $(document).ready(function() {
       checkBoxControl: "Подтвердите свое согласие"
     },
     //отправка формы через аякс
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       $.ajax({
         type: "POST",
         url: "sendControl.php",
         data: $(".control__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function(response) {
+        success: function (response) {
           //control.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           $(".modalSend").fadeIn();
@@ -193,12 +220,12 @@ $(document).ready(function() {
       }
     },
     //отправка формы через аякс
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       $.ajax({
         type: "POST",
         url: "sendFooter.php",
         data: $(".footer__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
-        success: function(response) {
+        success: function (response) {
           //footer.on('.modalSend');
           $(form)[0].reset(); // чистит поля после отправки формы
           $(".modalSend").fadeIn();
@@ -213,8 +240,8 @@ $(document).ready(function() {
   });
 
   //плавный якорь
-  $(function() {
-    $('a[href^="#"]').on("click", function(event) {
+  $(function () {
+    $('a[href^="#"]').on("click", function (event) {
       // отменяем стандартное действие
       event.preventDefault();
 
@@ -225,8 +252,7 @@ $(document).ready(function() {
        * dn - определяем положение блока на странице
        */
 
-      $("html, body").animate(
-        {
+      $("html, body").animate({
           scrollTop: dn
         },
         1000
@@ -240,9 +266,9 @@ $(document).ready(function() {
 });
 
 
-[].forEach.call(document.querySelectorAll("img[data-src]"), function(img) {
+[].forEach.call(document.querySelectorAll("img[data-src]"), function (img) {
   img.setAttribute("src", img.getAttribute("data-src"));
-  img.onload = function() {
+  img.onload = function () {
     img.removeAttribute("data-src");
   };
 });

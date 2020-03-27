@@ -56,7 +56,7 @@
         <a href="http://www.nekrasovvadim.ru/index.html" class="logo menu_logo wow fadeInLeft">Repair Design Project</a>
         <nav class="nav menu_nav" id="menu">
           <!--элемент блока menu.Элемент близлежащего родительского блока -->
-          <a href="#hero" class="nav__item" style="color:#E3B873;">Главная</a>
+          <a href="#hero" class="nav__item">Главная</a>
           <!--nav__item Элемент блока nav-->
           <a href="#projects" class="nav__item">Проекты</a>
           <a href="#design" class="nav__item">Замер</a>
@@ -229,10 +229,9 @@
     <section class="section control">
       <div class="container">
         <div class="section-title control__section-title section-title--light">
-          <h2 class="section-title__heading wow tada">Онлайн контроль</h2>
+          <h2 class="section-title__heading section-title__heading-control wow tada">Онлайн контроль</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image section-title__image--slideInUp">
-
             <img src="img/video.svg" alt="video" class="lazyload" />
           </div>
           <!-- /.section-title__image -->
@@ -241,7 +240,6 @@
         <div class="control__video video" id="player">
           <a class="video__play lazyload" data-fancybox href="https://www.youtube.com/watch?v=8awdQRP816c"><img
               src="img/play_icon.svg" alt="play icon" /></a>
-
         </div>
         <!-- /.control__video video -->
         <p class="control__text">
@@ -286,7 +284,7 @@
     <section class="section types">
       <div class="container">
         <div class="section-title types__section-title">
-          <h2 class="section-title__heading wow tada">Виды ремонта</h2>
+          <h2 class="section-title__heading section-title__heading-types wow tada">Виды ремонта</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img data-src="img/repair.svg" src="a" class="lazyload" alt="repair" />
@@ -382,7 +380,7 @@
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong class="card__pricetag">
+                <strong class="card__pricetag" id="design">
                   от 4000 руб / м<sup>2</sup>
                 </strong>
               </div>
@@ -397,10 +395,10 @@
       <!-- /.container -->
     </section>
     <!-- /.section control -->
-    <section class="section design" id="design">
+    <section class="section design">
       <div class="container">
         <div class="section-title design__section-title">
-          <h2 class="section-title__heading wow tada">Дизайн проект</h2>
+          <h2 class="section-title__heading section-title__heading-design wow tada">Дизайн проект</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/Vector.svg" alt="Vector" class="lazyload" />
@@ -571,15 +569,16 @@
               <div class="number swiper-container__number">
                 <div class="list swiper-container__list">
                   <ul>
-                    <li>
-                      <p class="number swiper-container__number swiper-container__number--inline">
+                    <li style="color:rgb(255, 255, 255);">
+                      <p class="number swiper-container__number swiper-container__number--inline"
+                        style="color:rgb(255, 255, 255);">
                         01
                       </p>
                       Выезд на замер<br />
                       помещения
                     </li>
                     <li>
-                      <p class="number swiper-container__number swiper-container__number--inline">
+                      <p class=" number swiper-container__number swiper-container__number--inline">
                         04
                       </p>
                       Закупка расходных<br />
@@ -638,6 +637,12 @@
                 <div class="swiper-slide">
                   <img data-src="img/step.png" class="lazyload" src="a" alt="Foto4" />
                 </div>
+                <div class="swiper-slide">
+                  <img data-src="img/step.png" class="lazyload" src="a" alt="Foto4" />
+                </div>
+                <div class="swiper-slide">
+                  <img data-src="img/step.png" class="lazyload" src="a" alt="Foto4" />
+                </div>
               </div>
             </div>
             <!-- /.col-50 -->
@@ -650,12 +655,12 @@
     <section class="section comand" id="comand">
       <div class="container">
         <div class="section-title comand__section-title">
-          <h2 class="section-title__heading wow tada">Наша команда</h2>
+          <h2 class="section-title__heading section-title__heading-comand wow tada">Наша команда</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/comand.png" alt="Vector" class="lazyload" />
           </div>
-          <p class="section-title__text">
+          <p class="section-title__text section-title__text-comand">
             Наша команда помогла стать счастливее более чем<br />
             500 семьям, и мы не собираемся останавливаться
           </p>
@@ -732,7 +737,7 @@
     <section class="section client" id="client">
       <div class="container">
         <div class="section-title client__section-title">
-          <h2 class="section-title__heading wow tada">Наши клиенты</h2>
+          <h2 class="section-title__heading section-title__heading-client wow tada">Наши клиенты</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
             <img src="img/client.png" alt="Vector" />
@@ -896,7 +901,7 @@
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" name="checkBoxFooter" id="footer-policy-checkbox" class="policy__checkbox" checked />
-            <label for="footer-policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
+            <label for="footer-policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
           <button class="btn btn--primary footer__btn" id="footer">
@@ -909,12 +914,12 @@
       <div class="footer__name">
         <div class="footer__text">
           <h2 class="footer__phone">
-            Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768
-            32 99
+            Ростов на дону, Торговый центр Plaza Прямой телефон
+            <a href="tel:+79997683299" class="footer__tel">+7&nbsp;(999) 768 32 99</a>
             <span></span>
           </h2>
           <div class="footer__img">
-            <a href="https://vk.com/glo_academy" target="_blank"><img src="img/massages.png" alt="Письмо"
+            <a href="mailto:n2v@list.ru" target="_blank"><img src="img/massages.png" alt="Письмо"
                 class="lazyload" /></a>
             <a href="https://vk.com/glo_academy" target="_blank"><img src="img/inst.png" alt="Инстаграмм"
                 class="lazyload" /></a>
@@ -923,7 +928,7 @@
         <div class="map footer__map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5900346694793!2d30.312798815590266!3d59.93894466903658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963110686a7c55%3A0xa2950fb15748e884!2z0JTQstC-0YDRhtC-0LLQsNGPINC_0LvQvtGJ0LDQtNGM!5e0!3m2!1sru!2sru!4v1585232839534!5m2!1sru!2sru"
-            width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            width="925" height="465" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
             tabindex="0" loading="lazy"></iframe>
         </div>
       </div>
@@ -936,9 +941,9 @@
           </div>
           <nav class="nav menu_nav">
             <!--элемент блока menu.Элемент близлежащего родительского блока -->
-            <a href="#hero" class="nav__item" style="color:#E3B873;">Главная</a>
+            <a href="#hero" class="nav__item">Главная</a>
             <!--nav__item Элемент блока nav-->
-            <a href="#projects" class="nav__item">Проекты</a>
+            <a href=" #projects" class="nav__item">Проекты</a>
             <a href="#design" class="nav__item">Замер</a>
             <a href="#comand" class="nav__item">Команда</a>
             <a href="#client" class="nav__item">Отзывы</a>
