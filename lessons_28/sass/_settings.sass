@@ -8,28 +8,30 @@ html
 
 
 body
-  font-family: 'Futura Book' , sans-serif
+  font-family: 'Futura Book', sans-serif
   font-size: 14px
   width: 100%
   max-width: 100%
   overflow-x: hidden
-  
+input 
+  outline: none
+
 img
   max-width: 100%
 .section
-  padding: 60px 0
   &.comand
     padding-bottom: 200px
   &--dark
     background-color: $dark
     color: $light
-    padding-bottom: 23rem
+    padding-bottom: 18rem
     &__foot
       padding-bottom: 0
+      margin-top: 23rem
   &-title
     text-align: center
     &__fraction
-      font-family: Yeseva One
+      font-family: 'Yeseva One'
       font-style: normal
       font-weight: normal
       font-size: 18px
@@ -61,20 +63,23 @@ img
       text-transform: uppercase
       font-family: 'Yseva One'
       margin-bottom: 5px
+      letter-spacing: -2px
       margin: 0
-      font-size: 1.425rem
-      line-height: 138.6%
-      &-design
-        font-size: 1.225rem
-        line-height: 50px
+      font-size: 1.825rem
+      line-height: 136.6%
       &-control
-        font-size: 1.225rem
+        font-size: 1.385rem
         line-height: 50px
         margin-top: 30px
+        margin-bottom: 0px
       &-types
-        font-size: 1.225rem
+        font-family: 'Yseva One'
         line-height: 50px
         margin-top: 30px
+        margin-bottom: 0px
+        font-size: 2.425rem
+        padding-bottom: 1rem
+
       &-comand
         font-size: 1.225rem
         line-height: 50px
@@ -83,7 +88,6 @@ img
         font-size: 1.225rem
         line-height: 50px
         margin-top: 30px
-
       &--primary
         color: $primary
     &__word
@@ -91,24 +95,24 @@ img
       align-items: center
       &::after
         content: ' '
-        width: 112px
+        width: 88px
         height: 2px
         background-color: $primary
         margin-left: 2.3rem
     &__text
-      text-align: center
-      &--client
-        max-width: 25.714rem
-        margin-bottom: 200px
-        font-size: 18px
+      max-width: 28.7rem
+      font-family: 'Futura Book', sans-serif
+      text-align: left
+      font-size: 1.1rem
+      font-style: normal
+      font-weight: normal
+    &--client
+      max-width: 25.714rem
+      margin-bottom: 200px
+      font-size: 18px
       &-comand
         font-size: 19px
-      &--family
-        max-width: 31.57rem
-        text-align: left
-        font-size: 1.28rem
-        line-height: 2.07rem
-        font-size: 1.3rem
+ 
       &--apparaiser
         max-width: 24.071rem
         font-family: 'FuturaBookC'

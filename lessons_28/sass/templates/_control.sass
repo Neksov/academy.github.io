@@ -1,9 +1,14 @@
 .control
+  padding-top: 1.9rem
+  padding-bottom: 130px
   &__heading
     font-size: 10px
   &__section-title
     margin-bottom: 2.214rem
-    margin-top: -23rem
+    margin-top: -25.2rem
+    padding-bottom: 2.2rem
+    &__image
+      padding-bottom: 2rem
   &__video
     display: flex
     margin: auto
@@ -13,6 +18,7 @@
     min-height: 27rem
     background: $dark url(../img/Mask-Group.png) no-repeat center
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+    margin-top: -34px
     &::before
       position: absolute
       content: ''
@@ -20,19 +26,20 @@
       height: 100%
       background-color: rgba($dark, 0.8)
   &__text
-    max-width: 40.7rem
+    max-width: 34.8rem
     margin: auto
     margin-bottom: 4.285rem
     text-align: center
-    font-size: 1.428rem
-    line-height: 2.41rem
+    font-size: 1.228rem
+    line-height: 2.21rem
     color: #363636
+    margin-bottom: 3.7rem
 
     &::before
       display: block
       content: ''
       margin: auto
-      margin-bottom: 2.5rem
+      margin-bottom: 1.5rem
       width: 55px
       height: 2px
       border-radius: 30px
@@ -41,7 +48,7 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
-    max-width: 55rem
+    max-width: 48rem
     margin: auto
   &__policy
     flex-basis: 100%
@@ -51,14 +58,19 @@
   &__input-group
     display: flex
     flex-direction: column
-    flex-basis: 30% 
+    flex-basis: 30%
   &__input
     color: $dark
+    padding: 0
+    font-size: 1.12rem
+    padding-bottom: 10px
+    &::placeholder
+      color: $light
   &__label
     margin-bottom: 7px
   &__btn
     position: relative
-    padding: 1.285rem 4.785rem
+    padding: 1.1rem 3.985rem
   #checkBoxControl-error
     position: absolute
     margin-left: 310px

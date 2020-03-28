@@ -46,6 +46,7 @@ $(document).ready(function () {
     $(".modalSend").fadeOut();
   });
 
+
   //слайдер Project
   var mySwiper = new Swiper(".swiper-container", {
     loop: true,
@@ -63,37 +64,10 @@ $(document).ready(function () {
   var prev = $(".swiper-button-prev");
   var bullets = $(".swiper-pagination");
 
-  next.css("left", prev.width() + 10 + bullets.width() + 10);
-  bullets.css("left", prev.width() + 10);
+  next.css("left", prev.width() + 15 + bullets.width() + 15);
+  bullets.css("left", prev.width() + 15);
 
   new WOW().init();
-
-  //Слайдер секции 6 шагов
-
-
-  var mySwiper2 = new Swiper('.slider-six-steps', {
-    loop: !0,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-six-steps-next',
-      prevEl: '.swiper-six-steps-prev',
-    },
-  });
-
-  var nextStepsBtn = $('.swiper-six-steps-next');
-  var prevStepsBtn = $('.swiper-six-steps-prev');
-  var bullets = $('.swiper-pagination');
-
-  nextStepsBtn.css('left', prevStepsBtn.width() + 20 + bullets.width() + 65)
-  bullets.css('left', prevStepsBtn.width() + 20)
-
-
-  new WOW({
-    mobile: false
-  }).init();
 
   //валидация форм
   $(".modal__form").validate({
